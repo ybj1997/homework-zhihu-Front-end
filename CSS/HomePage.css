@@ -1,0 +1,860 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.w{
+    width: 1000px;
+    margin: 62px auto;
+}
+body{
+    background-color: rgb(246, 246, 246);
+}
+li{
+    list-style: none;
+    cursor: pointer;
+}
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+/*头部导航栏------开始*/
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 52px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(18,18,18,0.1) 0px 1px 3px 0px;
+    z-index: 10;
+}
+.header .header-son{
+    width: 1156px;
+    height: 52px;
+    margin: 0 auto;
+}
+/*隐藏导航栏*/
+.header .nav{
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    height: 52px;
+}
+.nav .PageHeader{
+    width: 1156px;
+    height: 52px;
+    margin: 0 auto;
+}
+.PageHeader .logo{
+    float: left;
+    padding-top: 10px;
+}
+.header-son .loge{
+    float: left;
+    padding-top: 10px;
+}
+.header-son ul{
+    float: left;
+    margin-left: 20px;
+}
+.PageHeader ul{
+    float: left;
+    width: 246px;
+    padding-left: 18px;
+    height: 52px;
+    line-height: 52px;
+}
+.header-son ul li{
+    float: left;
+    margin: 0 15px;
+}
+.PageHeader ul li{
+    float: left;
+    margin: 0 22px;
+}
+.PageHeader ul li:hover{
+    color: rgb(23, 81, 153);
+}
+.header-son ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #8590A6;
+    line-height: 45px;
+}
+.header-son ul li a:hover{
+    color: black;
+}
+.header-son ul #first a{
+    font-weight: 800;
+    color: black;
+    border-bottom: 4px solid rgb(0, 102, 255);
+}
+.popover{
+    float: left;
+    width: 400px;
+    height: 34px;
+    background-color: rgb(246, 246, 246);
+    margin-left: 70px;
+    margin-top: 9px;
+    border-radius: 17px;
+}
+.popover input{
+    float: left;
+    color: #8590A6;
+    font-size: 14px;
+    border: none;
+    width: 326px;
+    height: 24px;
+    background-color: rgb(246, 246, 246);
+    margin-top:5px;
+    margin-left: 20px;
+    outline: none;
+}
+.popover button{
+    float: right;
+    border: none;
+    background-color: rgb(246, 246, 246);
+    color: rgb(133, 144, 166);
+    margin: 9px 20px 0 0;
+    outline: none;
+}
+.question{
+    float: left;
+    width: 70px;
+    height: 34px;
+    color: #fff;
+    background-color: #06f;
+    font-size: 14px;
+    border-radius: 17px;
+    margin-left: 15px;
+    margin-top: 9px;
+    line-height: 34px;
+    border: none;
+    outline: none;
+}
+.question span{
+    float: left;
+    margin-left: 20px;
+    margin-top: -9px;
+}
+.PageHeader-Search{
+    width: 381px;
+    height: 34px;
+    float: right;
+    margin-top: 10px;
+}
+.SearchBar-Wrapper{
+    float: left;
+    width: 299px;
+    height: 34px;
+    background-color: rgb(246, 246, 246);
+    border: 1px solid rgb(235,235,235);
+    border-radius: 17px;
+}
+.SearchBar-Wrapper label{
+    width: 281px;
+    height: 24px;
+    padding: 4px 0 4px 16px;
+    line-height: 30px;
+} 
+.SearchBar-Wrapper label .Input{
+    border: none;
+    outline: none;
+    background-color: rgb(246, 246, 246);
+    font-size: 14px;
+    font-weight: 400;
+}
+.SearchBar-Wrapper label button{
+    float: right;
+    margin:7px 15px;
+    background-color: rgb(246, 246, 246);
+    border: none;
+    color: #8590A6;
+}
+.TopstoryPageHeader-askButton{
+    float: right;
+    width: 70px;
+    height: 34px;
+    color: #fff;
+    background-color: #06F;
+    font-size: 14px;
+    border-radius: 17px;
+    border: 1px solid transparent;
+    outline: none;
+}
+.Appheader-userInfo{
+    float: right;
+    margin-left: ;
+}
+.Appheader-userInfo ul{
+    margin-right: 20px;
+    margin-top: 15px;
+}
+.Appheader-userInfo ul li{
+    margin: 0 20px;
+}
+.Appheader-userInfo ul li #Popover17-toggle{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: #8590A6;
+}
+.Appheader-userInfo ul li #Popover18-toggle{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: #8590A6;
+}
+.Appheader-userInfo .Appheader_img{
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+/*头部导航栏------结束*/
+/*版心部分------开始*/
+.main{
+    height: 1000px;
+    padding: 0 16px;
+}
+/*！！！！！！！！！内容懒加载*/
+.left{
+    float: left;
+    width: 694px;
+    height: 1500px;
+    padding-right: 5px;
+}
+
+.left .newYearimg{
+    width: 694px;
+    height: 95.177px;
+    box-shadow:rgba(18,18,18,0.1) 0px 1px 3px 0px;
+}
+.left .mian-content{
+    background-color: rgb(255, 255, 255);
+    margin-top: 5px;
+    height: 58px;
+    line-height: 58px;
+    box-shadow:rgba(18,18,18,0.1) 0px 1px 3px 0px;
+}
+.tabs{
+    overflow: hidden;
+    border-bottom: 1px solid rgb(240,242,247);
+}
+.tabs ul li{
+    float: left;
+    margin: 0 22px;
+}
+.tabs ul .first a{
+    color: rgb(0, 102, 255);
+}
+.tabs ul li a{
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+.tabs ul li a:hover{
+    color:rgb(23, 81, 153);
+}
+.left .main-massage{
+    background-color: rgb(255, 255, 255);
+}
+.left .main-massage .ContentItem-title{
+    margin: -4px 0;
+    line-height: 1.6;
+    color: #121212;
+    font-size: 18px;
+    font-weight: 600;
+}
+.left .main-massage a{
+    text-decoration: none;
+    color: rgb(18,18,18);
+}
+.left .main-massage .card-1{
+    padding: 20px;
+    border-bottom: 1px solid rgb(240,242,247);
+}
+.left .main-massage .card-2{
+    float: left;
+    padding: 20px;
+    border-bottom: 1px solid rgb(240,242,247);
+}
+.left .main-massage .card-3{
+    float: left;
+    padding: 20px;
+    border-bottom: 1px solid rgb(240,242,247);
+}
+.Richcontent-cover{
+    float: left;
+    height: 105px;
+    width: 195px;
+    margin: 15px 0 4px 0;
+}
+.Richcontent-cover .Richcontent-cover-inner img{
+    height: 105px;
+    width: 195px;
+}
+.Richcontent-inner{
+    float: right;
+    width: 446px;
+    height: 74px;
+    margin-top: 20px;
+}
+.Richcontent-inner span{
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1.67;
+}
+.Richcontent-inner button{
+    color: rgb(23,81,153);
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+}
+.ContentItem-actions{
+    float: left;
+    width: 654px;
+    height: 32px;
+    padding: 10px 20px;
+    margin: 0 -20px -10px;
+}
+.actions{
+    float: left;
+    width: 145.99px;
+    height: 32px;
+}
+.actions .VoteButton--up{
+    float: left;
+    width: 79.99px;
+    height: 30px;
+    padding: 0 12px;
+    border: transparent;
+    border-radius: 3px;
+    color: rgb(0,102,255);
+    font-size: 14px;
+    background-color: rgb(217, 232, 255);
+    line-height: 30px;
+}
+.actions .VoteButton--up span{
+    display: inline-block;
+    height: 30px;
+}
+.actions .VoteButton--down{
+    float: left;
+    height: 30px;
+    color: rgb(0,102,255);
+    background-color: rgb(217, 232, 255);
+    border-radius: 3px;
+    padding: 0 12px;
+    margin-left: 4px;
+    line-height: 30px;
+}
+.comment{
+    float: left;
+}
+.comment ul{
+    height: 30px;
+}
+.comment ul li {
+    display: inline-block;
+    margin-left: 24px;
+    height: 30px;
+}
+.comment ul li button{
+    float: left;
+    color: #8590A6;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    top: 10px;
+}
+.right{
+    position: relative;
+    float: right;
+    width: 296px;
+    height: 1041px;
+}
+.nvatop{
+    width: 266px;
+    height: 64px;
+    padding: 20px 15px;
+    background-color: #fff;
+}
+.nvatop li{
+    width: 50px;
+    height: 64px;
+    float: left;
+    margin-right: 22px;
+    text-align: center;
+}
+.nvatop .last{
+    margin-right: 0px;
+}
+.nvatop li svg{
+    padding-bottom: 12px;
+    text-align: center
+}
+.navIcon{
+    width: 52px;
+    height: 12px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #444;
+    text-align: center;
+}
+.navbottom{
+    width: 296px;
+    height: 50px;
+    background-color: #fff;
+    line-height: 50px;
+    text-align: center;
+    color: #8590A6;
+    font-size: 14px;
+}
+.navbottom-left{
+    float: left;
+    width: 148.5px;
+    height: 50px;
+    border-top: 1px solid rgb(246, 246, 246);
+    border-right: 1px solid rgb(246, 246, 246);
+}
+.navbottom-right{
+    float: left;
+    width: 146px;
+    height: 49px;
+    border-top: 1px solid rgb(246, 246, 246);
+    background-color: #fff;
+}
+.createEntrance{
+    width: 296px;
+    height: 52px;
+    margin: 10px 0;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 52px;
+}
+.createEntrance svg{
+    color: rgb(133, 144, 166);
+    float: left;
+}
+.creat span{
+    float: left;
+} 
+.creat .go{
+    margin-left: 100px;
+    color: rgb(0,102,255);
+}
+.creatorEntrance-creatorIcon{
+    margin: 18px 10px 18px 18px;
+}
+.creatorEntrance-arrow{
+    float: right;
+    margin: 14px;
+}
+.globalSideBar-category{
+    overflow: hidden;
+    width: 296px;
+    height: 175px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+.globalSideBar-categoryList{
+    width: 276px;
+    height: 160px;
+    padding: 0 10px;
+    margin: 20px 0 -5px;
+}
+.globalSideBar-categoryListItem{
+    float: left;
+    width: 91px;
+    height: 55px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.globalSideBar-categoryListItem a{
+    text-decoration: none;
+}
+.GlobalSideBar-categoryLabel{
+    margin-top: 5px;
+    color: #8590A6;
+}
+.card{
+    position: absolute;
+    width: 296px;
+    height: 296px;
+    background-color: #fff;
+}
+.card ul{
+    height: 280px;
+    padding: 8px 0;
+}
+.card ul li{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+} 
+.card ul li a{
+    width: 256px;
+    padding: 0 20px;
+    color: #8590A6;
+    text-decoration: none;
+}
+.card ul li a span{
+    display: inline-block;
+    margin-left:10px;
+}
+.Footer{
+    position: absolute;
+    text-decoration: none;
+    color: #8590A6;
+    font-size: 13px;
+    line-height: 26px;
+    top:715px;
+}
+.Footer-item{
+    color: #8590A6;
+    text-decoration: none;
+}
+.Footer .OrgCreateButton{
+    background-color: transparent;
+    border: none;
+    color: #8590A6;
+}
+.cornerButton{
+    position: fixed;
+    right: 12px;
+    top: 822px;
+    width: 40px;
+    height: 52px;
+    color: #8590A6;
+}
+.Button--back{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    box-shadow: rgba(18,18,18,0.1) 0px 1px 3px 0px;
+    color: rgb(133, 144, 166);
+    background-color: #fff;
+    border-radius:4px;
+    border:1px solid transparent;
+    border-style: none;
+    cursor: pointer;
+}
+.main-massage-Topstory{
+    width: 694px;
+    height: 150px;
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.Topstory-newUserFollowCountPanel{
+    border-top: 1px solid rgb(240,242,247);
+    width: 694px;
+    height: 150px;
+}
+.Topstory-newUserFollowCountPanelText{
+    color: rgb(128,128,128);
+    font-size: 15px;
+}
+.HotListNav{
+    height: 38px;
+    border-top: 1px solid rgb(246, 246, 246);
+    padding: 12px 16px;
+    background-color: #fff;
+}
+.HotListNav ul{
+    float: left;
+    height: 38px;
+    width: 532px;
+}
+.HotListNav ul li{
+    float: left;
+    width: 68px;
+    height: 30px;
+    margin: 4px;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgb(246, 246, 246);
+}
+.HotListNav ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(100,100,100);
+}
+.HotListNav ul .first{
+    background-color: rgb(229, 239, 255);
+}
+.HotListNav ul .first .first-1{
+    color: rgb(0, 102, 255);
+}
+.HotListNav-expandbutton{
+    float: right;;
+    width: 46px;
+    height: 24px;
+    border: 1px solid rgb(133, 144, 166);
+    border-radius: 15px;
+    font-size: 12px;
+    text-align: center;
+    background-color: transparent;
+    color: rgb(133, 144, 166);
+    margin-top: 8px;
+}
+.HotItem{
+    width: 678px;
+    height: 105px;
+    padding: 16px 16px 16px 0;
+    border-top: 1px solid rgb(235,235,235);
+    background-color: #fff;
+}
+.HotItem-index{
+    float: left;
+    width: 57px;
+    height: 79px;
+}
+.HotItem-rank{
+    color: rgb(153,153,153);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: inherit;
+    text-align: center;
+}
+.HotItem-label{
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    height: 19px;
+    width: 19px;
+    margin: 0 19px;
+    text-align: center;
+}
+.HotItem-content{
+    position: relative;
+    float: left;
+    width: 415px;
+    height: 105px;
+}
+.HotItem-content a{
+    text-decoration: none;
+}
+.HotItem-title{
+    font-size: 18px;
+    line-height: 28px;
+    max-height: initial;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 600;
+    color: #121;
+}
+.HotItem-excerpt{
+    height: 25px;
+    margin-top: 2px;
+    color: rgb(68,68,68);
+    font-size: 15px;
+    line-height: 25px;
+    min-height: initial;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.HotItem-metrics{
+    position: absolute;
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    color: #8590A6;
+    bottom: 5px;
+}
+.HotItem-metrics div{
+    float: left;
+    margin-top: 8px;
+}
+.HotItem-fire{
+    margin-right: 2px;
+}
+.HotItem-metrics .num{
+    margin-right: 30px;
+}
+.HotItem-action{
+    margin-right: 2px;
+}
+.HotItem-img{
+    display: inline-block;
+    width: 190px;
+    height: 105px;
+    margin-left: 16px;
+    object-fit: cover;
+}
+.HotItem-img img{
+    width: 100%;
+    height: inherit;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+}
+.people-selecte{
+    position: fixed;
+    width: 118px;
+    height: 120px;
+    border: 1px solid rgb(235,235,235);
+    box-shadow: rgba(18, 18, 18, 0.1) 0px 5px 20px 0px;
+    background-color: rgb(255, 255, 255);
+    top: 52px;
+    right: 90px;
+    margin-top: 10px;
+}
+.people-selecte span{
+    position: absolute;
+    left: 50px;
+    top: -20px;
+    border-bottom: 10px solid #fff;
+    border-top: 10px solid transparent;   
+    border-left: 10px solid transparent; 
+    border-right: 10px solid transparent;
+}
+.people-selecte li{
+    display: inline-block;
+    width: 78px;
+    height: 36px;
+    margin: 0 20px;
+    font-size: 14px;
+    color: rgb(133, 144, 166);
+    line-height: 36px;
+}
+.people-selecte ul{
+    padding: 7px 0;
+}
+.people-selecte li a{
+    color: rgb(133, 144, 166);
+}
+.main-content{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 1560px;
+    background-color: rgba(18,18,18,0.65);
+    z-index:999;
+    top:0;
+}
+.main-content .Modal{
+    position: relative;
+    width: 536px;
+    margin: 0 auto;
+    background-color: #fff;
+    top: 300px;
+}
+.Modal-closeButton{
+    position: absolute;
+    right: -60px;
+    top: 8px;
+    padding: 12px;
+    background-color: transparent;
+    color: #fff;
+}
+.Modal-content{
+    width: 488px;
+    padding: 24px 24px 32px;
+    bottom: 0;
+    line-height: 1.7;
+}
+.Ask-form{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    color: rgb(18,18,18);
+}
+.Ask-items{
+    padding-top: 8px;
+}
+.Ask-item{
+    margin-bottom:16px;
+    overflow: hidden;
+}
+.Ask-title{
+    position: relative;
+    overflow: hidden;
+}
+.Avatar--medium{
+    float: left;
+    border-radius: 3px;
+    margin: 3px 16px 0 0;
+}
+.Input-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(255,255,255);
+    border-radius: 3px;
+}
+.AskTitle-input{
+    max-height: 48px;
+    font-size: 18px;
+    padding: 0!important;
+    border: none;
+    line-height: 1.34;
+}
+#Popover49-toggle{
+    font-weight: 400;
+    border: none;
+    outline: none;
+    width: 100%;
+    resize: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", sans-serif;;
+}
+.AskFieldTip{
+    display: none;
+    color: rgb(241,64,60);
+    font-size: 15px;
+    text-align: right;
+}
+.AskDetail-actions{
+    float: right;
+    background-color: transparent;
+}
+.AskDetail-actions button{
+    padding: 2px;
+    margin: 0 4px;
+    background-color: transparent;
+    color: #8590A6;
+}
+.AskDetail-actions button:hover{
+    background-color: rgb(229, 239, 255);
+    border-radius: 4px;
+    color: rgb(0, 102, 255);
+}
+.AskDetail-input{
+    height: 78px;
+    padding: 6px 12px;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius:5px ;
+}
+.AskDetail-content{
+    font-size: 15px;
+    color: rgb(133, 144, 166);
+}
+.TopicInputAlias-tagInput button{
+    background-color: transparent;
+    color: rgb(0, 102, 255);
+}
+.Ask-footer button{
+    width: 88px;
+    height: 31.5px;
+    padding: 0 16px;
+    border: transparent;
+    outline: none;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 3px;
+    background-color: rgb(0,102,255);
+}
