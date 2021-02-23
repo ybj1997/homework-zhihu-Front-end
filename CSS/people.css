@@ -1,0 +1,687 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.w{
+    width: 1000px;
+    margin: 62px auto;
+}
+body{
+    background-color: rgb(246, 246, 246);
+}
+li{
+    list-style: none;
+    cursor: pointer;
+}
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+/*头部导航栏------开始*/
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 52px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(18,18,18,0.1) 0px 1px 3px 0px;
+    z-index: 999;
+}
+.header .header-son{
+    width: 1156px;
+    height: 52px;
+    margin: 0 auto;
+}
+/*隐藏导航栏*/
+.header .nav{
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    height: 52px;
+}
+.nav .PageHeader{
+    width: 1156px;
+    height: 52px;
+    margin: 0 auto;
+}
+.PageHeader .logo{
+    float: left;
+    padding-top: 10px;
+}
+.header-son .loge{
+    float: left;
+    padding-top: 10px;
+}
+.header-son ul{
+    float: left;
+    margin-left: 20px;
+}
+.PageHeader ul{
+    float: left;
+    width: 246px;
+    padding-left: 18px;
+    height: 52px;
+    line-height: 52px;
+}
+.header-son ul li{
+    float: left;
+    margin: 0 15px;
+}
+.PageHeader ul li{
+    float: left;
+    margin: 0 22px;
+}
+.PageHeader ul li:hover{
+    color: rgb(23, 81, 153);
+}
+.header-son ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #8590A6;
+    line-height: 45px;
+}
+.header-son ul li a:hover{
+    color: black;
+}
+.popover{
+    float: left;
+    width: 400px;
+    height: 34px;
+    background-color: rgb(246, 246, 246);
+    margin-left: 70px;
+    margin-top: 9px;
+    border-radius: 17px;
+}
+.popover input{
+    float: left;
+    color: #8590A6;
+    font-size: 14px;
+    border: none;
+    width: 326px;
+    height: 24px;
+    background-color: rgb(246, 246, 246);
+    margin-top:5px;
+    margin-left: 20px;
+    outline: none;
+}
+.popover button{
+    float: right;
+    border: none;
+    background-color: rgb(246, 246, 246);
+    color: rgb(133, 144, 166);
+    margin: 9px 20px 0 0;
+    outline: none;
+}
+.question{
+    float: left;
+    width: 70px;
+    height: 34px;
+    color: #fff;
+    background-color: #06f;
+    font-size: 14px;
+    border-radius: 17px;
+    margin-left: 15px;
+    margin-top: 9px;
+    line-height: 34px;
+    border: none;
+    outline: none;
+}
+.question span{
+    float: left;
+    margin-left: 20px;
+    margin-top: -9px;
+}
+.PageHeader-Search{
+    width: 381px;
+    height: 34px;
+    float: right;
+    margin-top: 10px;
+}
+.SearchBar-Wrapper{
+    float: left;
+    width: 299px;
+    height: 34px;
+    background-color: rgb(246, 246, 246);
+    border: 1px solid rgb(235,235,235);
+    border-radius: 17px;
+}
+.SearchBar-Wrapper label{
+    width: 281px;
+    height: 24px;
+    padding: 4px 0 4px 16px;
+    line-height: 30px;
+} 
+.SearchBar-Wrapper label .Input{
+    border: none;
+    outline: none;
+    background-color: rgb(246, 246, 246);
+    font-size: 14px;
+    font-weight: 400;
+}
+.SearchBar-Wrapper label button{
+    float: right;
+    margin:7px 15px;
+    background-color: rgb(246, 246, 246);
+    border: none;
+    color: #8590A6;
+}
+.TopstoryPageHeader-askButton{
+    float: right;
+    width: 70px;
+    height: 34px;
+    color: #fff;
+    background-color: #06F;
+    font-size: 14px;
+    border-radius: 17px;
+    border: 1px solid transparent;
+    outline: none;
+}
+.Appheader-userInfo{
+    float: right;
+}
+.Appheader-userInfo ul{
+    margin-right: 20px;
+    margin-top: 15px;
+}
+.Appheader-userInfo ul li{
+    margin: 0 20px;
+}
+.Appheader-userInfo ul li #Popover17-toggle{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: #8590A6;
+}
+.Appheader-userInfo ul li #Popover18-toggle{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: #8590A6;
+}
+.Appheader-userInfo .Appheader_img{
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-top: 12px;
+}
+/*头部导航栏--结束*/
+/*个人信息主栏--开始*/
+.ProfileHeader{
+    position: relative;
+    width: 1000px;
+    padding: 0 16px;
+    margin: 10px auto;
+}
+.Card{
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(18,18,18,.1);
+    box-sizing: border-box;
+    margin-top: 70px;
+}
+.UserCoverEditor{
+    position: relative;
+    height: 132px;
+    background-color: rgb(153, 153, 153);
+    margin-top: px;
+}
+.DynamicColorButton{
+    position: absolute;
+    width: 139px;
+    height: 33px;
+    right: 20px;
+    top:30px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 14px;
+}
+.UserCoverEditor-wrapper{
+    box-sizing: border-box;
+    position: relative;
+    width: 660px;
+    background-color: #fff;
+}
+.ProfileHeader-main{
+    position: relative;
+    margin: 0 20px 24px;
+}
+.ProfileHeader-avatar{
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+.UserAvatar{
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    vertical-align: top;
+    background-color: #fff;
+    border: 4px solid #fff;
+    border-radius: 8px;
+}
+.ProfileHeader-content{
+    width: 764px;
+    padding-top: 16px;
+    padding-left: 32px;
+    border-left:164px solid transparent ;
+}
+.ProfileHeader-contentHead{
+    position: relative;
+    padding-right: 106px;
+    margin-bottom: 16px;
+}
+.ProfileHeader-title{
+    -webkit-box-flex: 1;
+    flex: 1 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 26px;
+}
+.ProfileHeader-contentBody{
+    display: none;
+    height: 43px;
+}
+.ProfileHeader-contentBody span{
+    font-weight: 600;
+    font-size: 15px;
+}
+.ProfileHeader-contentFooter{
+    position: relative;
+    padding-top: 8px;
+    height: 24px;
+}
+.ProfileHeader-expandButton1{
+    display: inline-block;
+    line-height: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #8590A6;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+.ProfileHeader-expandButton2{
+    display: inline-block;
+    line-height: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #8590A6;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+.ProfileHeader-buttons{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.ProfileHeader-buttons button{
+    display: inline-block;
+    width: 120px;
+    height: 32px;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    background-color: transparent;
+    color: #06f;
+    border: 1px solid #06f;
+    border-radius: 3px;
+}
+/*个人信息主页--结束*/
+/*左侧主页--开始*/
+.Profile-main{
+    display: flex;
+    width: 1000px;
+    min-height: 100vh;
+    padding: 0 16px;
+    margin: 10px auto;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    align-items: flex-start;
+}
+.ProfileMain{
+    overflow: initial;
+    margin: 0;
+}
+.ProfileMain-tabs{
+    display: flex;
+    width: 694px;
+    height: 50px;
+    border-bottom: 1px solid rgb(246,246,246);
+    -webkit-box-flex: 1;
+    flex:1 1;
+}
+
+.Tabs-item{
+    margin: 0 12px;
+    width: 46px;
+    line-height: 50px;
+}
+.Tabs-item--noMeta{
+    width: 32px;
+    line-height: 50px;
+}
+.Tabs-item a{
+    position: relative;
+    float: left;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(18,18,18);
+}
+.Tabs-item a::after{
+    display: none;
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 3px;
+    background-color: #06f;
+}
+.Tabs-item span{
+    float: right;
+    color: rgb(153, 153, 153);
+    margin-left: 4px;
+}
+.List-header{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 50px;
+    margin: 0 20px;
+    border-bottom: 1px solid #f6f6f6;
+    box-sizing: border-box;
+    width: 654px;
+}
+.css-1g5evo1{
+    width: 694px;
+    height: 144px;
+    padding: 70px 0;
+}
+.css-1jfwu0r{
+    display: flex;
+    height: 100%;
+    flex: 1;
+    justify-content: center;
+    -webkit-box-pack: center;
+    align-items: center;
+    min-width:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.center{
+    color: #8590A6;
+}
+.center svg{
+    margin-left: 50px;
+}
+.center a{
+    text-decoration: none;
+    color:#175199;
+}
+/*左侧主页--结束*/
+/*右侧边栏--开始*/
+.Profile-RightColumn{
+    width: 296px;
+    color: #646464;
+}
+.Createcenter-main{
+    display: flex;
+    width: 272px;
+    height: 56px;
+    padding: 0 20px 0 4px;
+}
+.Createcenter{
+    margin: 0;
+}
+.Createcenter-main-image{
+    height: 40px;
+    width: 80px;
+    margin-top: 6px;
+}
+.Createcenter-text{
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction:column;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    margin-left: 6px;
+    line-height: 16px;
+    justify-content: space-around;
+}
+.Createcenter-title{
+    font-size: 14px;
+    font-weight: 600;
+    color:#121212;
+}
+.Createcenter-title{
+    display: flex;
+    width: 162px;
+    height: 16px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.Createcenter-title-detail span{
+    margin-left: 50px;
+    color: rgb(0,102,255);
+    font-size: 14px;
+    font-weight: 600;
+}
+.Createcenter-arrow{
+    color: #8590A6;
+    margin-top: 15px;
+}
+.CareshipCard{
+    margin-top: 10px;
+    width: 296px;
+}
+.NumberBoard{
+    display: flex;
+}
+.NumberBoard span{
+    border-left:1px solid rgb(235, 235, 235);
+}
+.NumberBoard-item{
+    flex: 1 1;
+    -webkit-box-flex: 1;
+    height: auto;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.NumberBoard-itemInner{
+    line-height: 1.6;
+    padding: 12px 0;
+    color: #8590A6;
+    font-size: 14px;
+}
+.NumberBoard-itemInner strong{
+    font-size: 18px;
+    color:#121212;
+    font-weight: 600;
+}
+.Profile-lightList{
+    font-size: 14px;
+    margin-top: 10px;    
+}
+.Profile-lightItem{
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    height: 46px;
+    padding-left: 5px;
+    border-top: 1px solid #ebebeb;
+    text-decoration: none;
+    justify-content: space-between;
+}
+.Profile-lightItem span{
+    color: #8590A5;
+}
+.Profile-footerOperations{
+    color: #8590A6;
+    width: 100%;
+    padding: 10px 0 10px 5px;
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: left;
+    border-bottom: 1px solid #ebebeb;
+    border-top: 1px solid #ebebeb;
+}
+.Footer{
+    position: absolute;
+    text-decoration: none;
+    color: #8590A6;
+    font-size: 13px;
+    line-height: 26px;
+    top:735px;
+}
+.Footer-item{
+    color: #8590A6;
+    text-decoration: none;
+}
+.Footer .OrgCreateButton{
+    background-color: transparent;
+    border: none;
+    color: #8590A6;
+}
+.List-headerOptions .Popover{
+    vertical-align: middle;
+}
+.List-headerOptions .Select-button{
+    display: flex;
+    background-color: transparent;
+    color: #8590A6;
+    align-items: center;
+}
+.List-headerOptions .Select-button svg{
+    display: inline-block;
+}
+.List-header-shoucang{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+.CollectionsHeader-tabsLink1{
+    margin: 0 22px;
+    text-decoration: none;
+    color: black;    
+}
+.CollectionsHeader-tabsLink1 span{
+    position: relative;
+    display: inline-block;
+    height: 58px;
+    line-height: 58px;
+}
+.CollectionsHeader-tabsLink1 span::after{
+    position: absolute;
+    content: "";
+    height: 3px;
+    background-color: #06f;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.CollectionsHeader-tabsLink2{
+    margin: 0 22px;
+    text-decoration: none;
+    color: black;    
+}
+.CollectionsHeader-tabsLink2 span{
+    position: relative;
+    display: inline-block;
+    height: 58px;
+    line-height: 58px;
+}
+.CollectionsHeader-tabsLink2 span::after{
+    display: none;
+    position: absolute;
+    content: "";
+    height: 3px;
+    background-color: #06f;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.CollectionsHeader-addFavlistButton{
+    position: absolute;
+    right: -20px;
+}
+.CollectionEmptyState{
+    display: flex;
+    -webkit-box-vrient:vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: #8590A6;
+    font-size: 14px;
+    height: 600px;
+    margin-top: 0px;
+}
+.CollectionEmptyState1{
+    display: flex;
+    -webkit-box-vrient:vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: #8590A6;
+    font-size: 14px;
+    height: 600px;
+    margin-top: 0px;
+}
+.CollectionEmptyState-imageContainer{
+    width: 170px;
+    height: 106px;
+    margin-bottom: 20px;
+    background: 50% url(/images/noting.png);
+    background-size: contain;
+}
+.SubTabs{
+    height: 50px;
+    line-height: 50px;
+}
+.SubTabs-item{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 400;
+    color: black;
+    margin-right: 36px;
+    height: 21px;
+    padding: 6px 0 7px 0;
+    line-height: 21px;
+    font-size: 15px;
+}
+.is-active{
+    font-weight: 600;
+}
+#Popover56-toggle{
+    display: flex;
+    background-color: transparent;
+    font-size: 1em;
+}
