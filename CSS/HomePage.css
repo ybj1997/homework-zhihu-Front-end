@@ -195,7 +195,6 @@ a{
 }
 .Appheader-userInfo{
     float: right;
-    margin-left: ;
 }
 .Appheader-userInfo ul{
     margin-right: 20px;
@@ -558,13 +557,17 @@ a{
     padding-bottom: 20px;
 }
 .Topstory-newUserFollowCountPanel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-top: 1px solid rgb(240,242,247);
     width: 694px;
-    height: 150px;
 }
 .Topstory-newUserFollowCountPanelText{
     color: rgb(128,128,128);
     font-size: 15px;
+    height: 20px;
+    margin-top: -20px;
 }
 .HotListNav{
     height: 38px;
