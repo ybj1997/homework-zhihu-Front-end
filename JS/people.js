@@ -21,10 +21,10 @@ let tiwen = document.querySelector('.tiwenbankuai');
 let wenzhang = document.querySelector('.wenzhangbankuai');
 let shoucang = document.querySelector('.shoucangbankuai');
 let guanzhu = document.querySelector('.guanzhubankuai');
-let lis = document.querySelector('.Tabs-item');
-lis.addEventListener('click',function(){
-    console.log(11);
-})
-dongtai.addEventListener('click',function(){
-    this.style.fontweight = '600';
-})
+let lis = document.querySelectorAll('.Tabs-item');
+console.log(lis.length);
+for(let i = 0;i<lis.length;i++){
+    lis[i].addEventListener('click',function(){
+        console.log(11);
+    })
+}
