@@ -607,6 +607,13 @@ a{
     border-bottom: 1px solid #f6f6f6;
     background-color: #fff;
 }
+.QuestionWaiting-types--fixed{
+    position: fixed;
+    border-bottom: none;
+    width: 674px;
+    box-shadow:0 1px 3px rgba(18,18,18,.1), 0 6px 32px 0 rgba(0,0,0,.02); 
+    z-index: 2;
+}
 .QuestionWaiting-types a{
     text-decoration: none;
     cursor: pointer;
@@ -636,6 +643,7 @@ a{
 }
 /*结束*/
 .QuestionWaiting-questions{
+    position: relative;
     padding: 0 20px;
 }
 .QuestionWaiting-questions-card{
