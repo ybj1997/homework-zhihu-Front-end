@@ -74,8 +74,7 @@ window.addEventListener('load',function(){
             animatebtn(cornerButton,770);
         }else{
             animatebtn(cornerButton,822);
-        }
-        
+        }    
     })
     Button_back.addEventListener('click',function(){
         animategoback(window,0);
@@ -113,4 +112,5 @@ window.addEventListener('load',function(){
     Popover49_toggle.addEventListener('focus',function(){
         AskFieldTip.style.display = 'none';
     });
+
 })

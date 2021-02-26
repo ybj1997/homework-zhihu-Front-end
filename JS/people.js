@@ -14,7 +14,7 @@ btn2.addEventListener('click',function(){
     ProfileHeader_contentBody.style.display = 'none';
 });
 })
-/*导航栏部分*/
+/*导航栏部分----未完善*/
 let dongtai = document.querySelector('.dongtaibankuai');
 let huida = document.querySelector('.huidabankuai');
 let tiwen = document.querySelector('.tiwenbankuai');
