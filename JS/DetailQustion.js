@@ -65,10 +65,13 @@ window.addEventListener('load', function () {
     二：主要内容滚动不漏边
     */
     let QuestionWaiting_types = document.querySelector('.QuestionWaiting-types');
+    let QuestionWaiting_left = document.querySelector('.QuestionWaiting-left');
     document.addEventListener('scroll',function(){
         if(window.pageYOffset > 0){
             QuestionWaiting_types.setAttribute('class','QuestionWaiting-types QuestionWaiting-types--fixed');
-            let creat_div = this.createElement('div');
+            let creat_div = document.createElement('div');
+            QuestionWaiting_left.insertBefore('creat_div','QuestionWaiting_types QuestionWaiting-types--fixed');
+            creat_div.setAttribute('class','creat_div_style');
         }else{
             QuestionWaiting_types.setAttribute('class','QuestionWaiting-types');
         }

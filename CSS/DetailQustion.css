@@ -607,6 +607,14 @@ a{
     border-bottom: 1px solid #f6f6f6;
     background-color: #fff;
 }
+.create-div{
+    position: fixed;
+    background-color: #f6f6f6;
+    height: 70px;
+    width: 700px;
+    z-index: -1;
+    top: 50px;
+}
 .QuestionWaiting-types--fixed{
     position: fixed;
     border-bottom: none;
@@ -719,4 +727,13 @@ a{
     font-size: 14px;
     cursor: pointer;
     background-color: transparent;
+}
+.creat_div_style{
+    background-color: #f6f6f6;
+    width: 700px;
+    position: absolute;
+    height: 78px;
+    left: -3px;
+    bottom: 0;
+    z-index: 1;
 }
