@@ -46,7 +46,7 @@ window.addEventListener('load', function () {
     let send_massage = document.querySelector('.Button.CountingDownButton.SignFlow-smsInputButton.Button--plain');
     let SignFlow_submitButton = document.querySelector('.SignFlow-submitButton');
     username.addEventListener('blur', function () {
-        if (this.value == 0) {
+        if (this.value == 0) {5
             this.placeholder = '请输入手机号';
         } else {
 
