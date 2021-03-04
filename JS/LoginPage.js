@@ -42,65 +42,55 @@ window.addEventListener('load', function () {
     })
     //手机登录验证
 
-    //username.addEventListener('blur',function(){
-    //    if(this.value == 0){
-    //        this.placeholder = '请输入手机号';
-    //    }else{
-    //        const username_num = new XMLHttpRequest();
-    //        username_num.open('post','http://musicapi.leanapp.cn/personalized',true);
-    //        username_num.send('手机号码为：'+username);
-    //        username_num.onreadystatechange = function(){
-    //            if(this.readyState == 4){
-    //                if(this.status == 200){
-    //                    console.log('请求成功');
-    //                }else{
-    //                    console.log('请求失败');
-    //                }
-    //            }
-    //        }
-    //    }
-    //})
-    //digits.addEventListener('blur',function(){
-    //    if(this.value == 0){
-    //        this.placeholder = '请输入验证码';
-    //    }else{
 
-    //    }
-    //})
     let username = document.querySelector('.SignFlow-accountInputContainer').querySelector('.Input-wrapper').querySelector('input');
     let digits = document.querySelector('.SignFlow-InputContainer').querySelector('.Input-wrapper').querySelector('input');
     let send_massage = document.querySelector('.Button.CountingDownButton.SignFlow-smsInputButton.Button--plain');
     let SignFlow_submitButton = document.querySelector('.SignFlow-submitButton');
+    username.addEventListener('blur', function () {
+        if (this.value == 0) {
+            this.placeholder = '请输入手机号';
+        } else {
 
+        }
+    })
+    digits.addEventListener('blur', function () {
+        if (this.value == 0) {
+            this.placeholder = '请输入验证码';
+        } else {
+        }
+    })
     send_massage.addEventListener('click', function () {
-        const phone = new XMLHttpRequest();
-        phone.open('get', '', true);
-        phone.send();
-        phone.onreadystatechange = function () {
+        send_massage.disabled = true;
+        let time = 60;
+        let timer = setInterval(function () {
+            if (time == 0) {
+                //倒计时完成要清除定时器，改变按钮内容，取消禁止按钮，重置倒计时
+                clearInterval(timer);
+                send_massage.innerHTML = '获取短信验证';
+                send_massage.style.color = 'rgb(23, 81, 153)';
+                send_massage.disabled = false;
+                time = 3;
+            } else {
+                send_massage.innerHTML =  time + '秒后可重发';
+                send_massage.style.color = '#8590A6';
+                time--;
+            }
+        }, 1000);
+        const massage = new XMLHttpRequest();
+        massage.open('get', '', true);
+        massage.send();
+        massage.onreadystatechange = function () {
             if (this.readyState == 4) {
                 if (status == 200) {
-                    var massage = JSON.parse(phone.responseText);
-                    var yanzhengma = massage.code;
+                    //var massage = JSON.parse(phone.responseText);
+                    //var yanzhengma = massage.code;
+                    console.log('请求成功');
                     SignFlow_submitButton.addEventListener('click', function () {
                         //实例化XMLHttpRequest对象
-                        const xhr = new XMLHttpRequest();
-                        //初始化一个post请求
-                        xhr.open('post','', true);
-                        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                        //接收返回值
-                        xhr.send('验证码：' + yanzhengma + '$手机号：' + username.value);
-                        xhr.onreadystatechange = () => {
-                            if (xhr.readyState === 4) {
-                                if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
-                                    var xhr = JSON.parse(phone.responseText);
-                                    console.log(xhr);
-                                } else {
-                                    console.log('请求失败');
-                                }
-                            }
-                        };
+                        console.log(11);
                         //发送请求
-                        
+
                     })
                 }
                 else {
@@ -109,4 +99,5 @@ window.addEventListener('load', function () {
             }
         }
     })
+
 })
