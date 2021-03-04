@@ -41,8 +41,6 @@ window.addEventListener('load', function () {
         btn2.style.display = 'block';
     })
     //手机登录验证
-
-
     let username = document.querySelector('.SignFlow-accountInputContainer').querySelector('.Input-wrapper').querySelector('input');
     let digits = document.querySelector('.SignFlow-InputContainer').querySelector('.Input-wrapper').querySelector('input');
     let send_massage = document.querySelector('.Button.CountingDownButton.SignFlow-smsInputButton.Button--plain');
