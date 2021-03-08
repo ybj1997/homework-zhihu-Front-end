@@ -45,6 +45,7 @@ window.addEventListener('load', function () {
     let digits = document.querySelector('.SignFlow-InputContainer').querySelector('.Input-wrapper').querySelector('input');
     let send_massage = document.querySelector('.Button.CountingDownButton.SignFlow-smsInputButton.Button--plain');
     let SignFlow_submitButton = document.querySelector('.SignFlow-submitButton');
+    //输入框样式
     username.addEventListener('blur', function () {
         if (this.value == 0) {5
             this.placeholder = '请输入手机号';
@@ -58,6 +59,7 @@ window.addEventListener('load', function () {
         } else {
         }
     })
+    //短信发送按钮动画
     send_massage.addEventListener('click', function () {
         send_massage.disabled = true;
         let time = 60;
@@ -75,27 +77,37 @@ window.addEventListener('load', function () {
                 time--;
             }
         }, 1000);
+        //get请求
         const massage = new XMLHttpRequest();
-        massage.open('get', '', true);
-        massage.send();
+        massage.open('GET', '', true); 
         massage.onreadystatechange = function () {
-            if (this.readyState == 4) {
-                if (status == 200) {
+            if (massage.readyState == 4) {
+                if (massage.status == 200 && massage.status < 300) {
                     //var massage = JSON.parse(phone.responseText);
                     //var yanzhengma = massage.code;
                     console.log('请求成功');
-                    SignFlow_submitButton.addEventListener('click', function () {
-                        //实例化XMLHttpRequest对象
-                        console.log(11);
-                        //发送请求
-
-                    })
                 }
                 else {
-                    console.log('请求失败');
+                    console.log('请求失败'); 
                 }
             }
         }
+        massage.send();
     })
-
+    SignFlow_submitButton.addEventListener('click',function(){
+        const user_massge = new XMLHttpRequest();
+        user_massge.open('POST','',ture);
+        user_massge.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        user_massge.onreadystatechange = function(){
+            if (massage.readyState == 4) {
+                if (massage.status == 200 && massage.status < 300) {
+                    console.log('请求成功');
+                }
+                else {
+                    console.log('请求失败'); 
+                }
+            }
+        user_massge.send(username.value,digits.value);
+        }
+    })
 })
