@@ -195,6 +195,7 @@ a{
 }
 .Appheader-userInfo{
     float: right;
+    margin-left: ;
 }
 .Appheader-userInfo ul{
     margin-right: 20px;
@@ -293,28 +294,26 @@ a{
     padding: 20px;
     border-bottom: 1px solid rgb(240,242,247);
 }
-.left .main-massage .card-4{
-    float: left;
-    padding: 20px;
-    border-bottom: 1px solid rgb(240,242,247);
-}
 .Richcontent-cover{
     float: left;
     height: 105px;
     width: 195px;
-    margin: 0px 0 4px 0;
+    margin: 15px 0 4px 0;
 }
 .Richcontent-cover .Richcontent-cover-inner img{
-    height: 95px;
-    width: 175px;
+    height: 105px;
+    width: 195px;
 }
 .Richcontent-inner{
+    float: right;
+    width: 446px;
+    height: 74px;
     margin-top: 20px;
-    margin-left: 10px;
-    line-height: 30px;
 }
 .Richcontent-inner span{
+    display: inline-block;
     font-size: 15px;
+    line-height: 1.67;
 }
 .Richcontent-inner button{
     color: rgb(23,81,153);
@@ -559,17 +558,13 @@ a{
     padding-bottom: 20px;
 }
 .Topstory-newUserFollowCountPanel{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border-top: 1px solid rgb(240,242,247);
     width: 694px;
+    height: 150px;
 }
 .Topstory-newUserFollowCountPanelText{
     color: rgb(128,128,128);
     font-size: 15px;
-    height: 20px;
-    margin-top: -20px;
 }
 .HotListNav{
     height: 38px;

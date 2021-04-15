@@ -1,5 +1,4 @@
-window.addEventListener('load', function () {
-    //登录方式选择
+window.addEventListener('load',function(){
     let tab1 = document.querySelector('.SignFlow-tab1');
     let tab2 = document.querySelector('.SignFlow-tab2');
     let account1 = document.querySelector('.SignFlow-account');
@@ -10,7 +9,7 @@ window.addEventListener('load', function () {
     let options2 = document.querySelector('.Login-options');
     let btn1 = document.querySelector('.submitButton');
     let btn2 = document.querySelector('.SignFlow-submitButton');
-    tab2.addEventListener('click', function () {
+    tab2.addEventListener('click',function(){
         this.style.borderBottom = '3px solid rgb(0,102,255)';
         this.style.fontWeight = '800';
         tab1.style.borderBottom = 'none';
@@ -24,7 +23,7 @@ window.addEventListener('load', function () {
         btn1.style.display = 'block';
         btn2.style.display = 'none';
     })
-    tab1.addEventListener('click', function () {
+    tab1.addEventListener('click',function(){
         this.style.borderBottom = '3px solid rgb(0,102,255)';
         this.style.fontWeight = '800';
         tab2.style.borderBottom = 'none';
@@ -39,75 +38,5 @@ window.addEventListener('load', function () {
         options2.style.display = 'none';
         btn1.style.display = 'none';
         btn2.style.display = 'block';
-    })
-    //手机登录验证
-    let username = document.querySelector('.SignFlow-accountInputContainer').querySelector('.Input-wrapper').querySelector('input');
-    let digits = document.querySelector('.SignFlow-InputContainer').querySelector('.Input-wrapper').querySelector('input');
-    let send_massage = document.querySelector('.Button.CountingDownButton.SignFlow-smsInputButton.Button--plain');
-    let SignFlow_submitButton = document.querySelector('.SignFlow-submitButton');
-    //输入框样式
-    username.addEventListener('blur', function () {
-        if (this.value == 0) {5
-            this.placeholder = '请输入手机号';
-        } else {
-
-        }
-    })
-    digits.addEventListener('blur', function () {
-        if (this.value == 0) {
-            this.placeholder = '请输入验证码';
-        } else {
-        }
-    })
-    //短信发送按钮动画
-    send_massage.addEventListener('click', function () {
-        send_massage.disabled = true;
-        let time = 60;
-        let timer = setInterval(function () {
-            if (time == 0) {
-                //倒计时完成要清除定时器，改变按钮内容，取消禁止按钮，重置倒计时
-                clearInterval(timer);
-                send_massage.innerHTML = '获取短信验证';
-                send_massage.style.color = 'rgb(23, 81, 153)';
-                send_massage.disabled = false;
-                time = 3;
-            } else {
-                send_massage.innerHTML =  time + '秒后可重发';
-                send_massage.style.color = '#8590A6';
-                time--;
-            }
-        }, 1000);
-        //get请求
-        const massage = new XMLHttpRequest();
-        massage.open('GET', '', true); 
-        massage.onreadystatechange = function () {
-            if (massage.readyState == 4) {
-                if (massage.status == 200 && massage.status < 300) {
-                    //var massage = JSON.parse(phone.responseText);
-                    //var yanzhengma = massage.code;
-                    console.log('请求成功');
-                }
-                else {
-                    console.log('请求失败'); 
-                }
-            }
-        }
-        massage.send();
-    })
-    SignFlow_submitButton.addEventListener('click',function(){
-        const user_massge = new XMLHttpRequest();
-        user_massge.open('POST','',ture);
-        user_massge.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        user_massge.onreadystatechange = function(){
-            if (massage.readyState == 4) {
-                if (massage.status == 200 && massage.status < 300) {
-                    console.log('请求成功');
-                }
-                else {
-                    console.log('请求失败'); 
-                }
-            }
-        user_massge.send(username.value,digits.value);
-        }
     })
 })

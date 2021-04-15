@@ -23,7 +23,7 @@ window.addEventListener('load',function(){
     let HotList = document.querySelector('.HotList');
     nav_recommend2.addEventListener('click',function(){
         nav_recommend_as[1].style.color = 'rgb(0, 102, 255)';
-        nav_recommend_as[2].style.color = 'black';
+        nav_recommend_as[0].style.color = 'black';
         nav_recommend_as[0].style.color = 'black';
         main_massage_Topstory.style.display = 'block';
         HotListNav.style.display = 'none';
@@ -74,7 +74,8 @@ window.addEventListener('load',function(){
             animatebtn(cornerButton,770);
         }else{
             animatebtn(cornerButton,822);
-        }    
+        }
+        
     })
     Button_back.addEventListener('click',function(){
         animategoback(window,0);
@@ -112,5 +113,4 @@ window.addEventListener('load',function(){
     Popover49_toggle.addEventListener('focus',function(){
         AskFieldTip.style.display = 'none';
     });
-
 })
